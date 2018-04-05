@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #eee;
+}
+input:focus {
+  outline: none;
+}
+.content {
+  /* Remove this class when it is in pop-up */
+  border: 2px solid #222333;
+  width: 800px;
+  height: 600px;
+  display: block;
+  margin: 2rem auto;
+}
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+}
+.logo-image {
+  width: 60px;
+  height: 80px;
+  margin-left: 1rem;
+  margin-top: 0.8rem;
+}
+.logo-text {
+  font-size: 2rem;
+  color: #494c7b;
+  line-height: 3.5rem;
+  padding-left: 0.3rem;
+}
+.nav {
+  display: flex;
+  list-style-type: none;
+  margin-right: 1rem;
+}
+.nav-item {
+  margin: 1rem;
+  font-size: 2rem;
+}
+.link {
+  color: #494c7b;
+}
+/* STRIP */
+.page-title {
+  background-color: #494c7b;
+  width: 100%;
+  color: #eee;
+  font-size: 2.2rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+/* MAIN CONTENT */
+.form-area,
+.track-area {
+  width: 80%;
+  margin: 1rem auto;
+}
+.form,
+.track-list {
+  display: flex;
+  flex-direction: column;
+}
+.form-input,
+.submit {
+  margin: 0.8rem auto;
+  width: 60%;
+  font-size: 1.8rem;
+  color: #494c7b;
+  font-family: 'Reenie Beanie', cursive;
+  padding: 0.3rem;
+  border: none;
+  border-bottom: 1px solid #494c7b;
+  background-color: transparent;
+}
+.submit {
+  background-color: #7b4965;
+  font-family: 'Ubuntu', sans-serif;
+  color: #eee;
+  font-size: 1.4rem;
+  margin-top: 1.2rem;
+}
+.track-item {
+  margin: 0.8rem auto;
+  width: 50%;
+  font-size: 2.2rem;
+  color: #494c7b;
+  font-family: 'Reenie Beanie', cursive;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.item-icon {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+/* TABLE */
+.table {
+  font-family: 'Reenie Beanie', cursive;
+  color: #494c7b;
+  font-size: 2rem;
+  width: 80%;
+  display: block;
+  margin: 4rem auto;
+  border-spacing: 8px;
+  border-collapse: separate;
+}
+.table-head {
+  font-size: 1.8rem;
+}
+.table-title {
+  text-align: left;
+}
+.empty {
+  width: 40px;
+  height: 40px;
+  background-color: #bbbcce;
+}
+.task1 {
+  background-color: #62fc10;
+}
+.task2 {
+  background-color: #10e0fc;
+}
+.task3 {
+  background-color: #f910fc;
+}
+.task4 {
+  background-color: #fcb510;
+}
+.task5 {
+  background-color: #fc1054;
+}
