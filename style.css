@@ -58,6 +58,12 @@ input:focus {
   text-align: center;
 }
 /* MAIN CONTENT */
+.page {
+  display: block;
+}
+.hide-part {
+  display: none;
+}
 .form-area,
 .track-area {
   width: 80%;
@@ -100,6 +106,19 @@ input:focus {
 .item-icon {
   font-size: 1.5rem;
   line-height: 2.5rem;
+  position: relative;
+}
+.checkmark,
+.box {
+  position: absolute;
+}
+.checkmark {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  color: green;
+}
+.hide {
+  display: none;
 }
 /* TABLE */
 .table {
