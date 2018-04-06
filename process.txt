@@ -1,0 +1,17 @@
+About the process and the steps to develop the Chrome extension:
+
+1. The different pages are going to be actually one popup page and javascript would serve only one of them each time the user clicks a menu button or submits the form. So actually one big HTML file.
+2. Data would be saved in localStorage.
+3. Data would be visualized using D3? (still need to decide) If yes - follow this tutorial: https://vis4.net/blog/2015/04/making-html-tables-in-d3-doesnt-need-to-be-a-pain/ or: http://bl.ocks.org/jfreels/6734025.
+Can work more on: http://blockbuilder.org/veredrec/ff68f8b8e423a04e058d41a837255670.
+4. Logo would be designed in Illustrator.
+
+Tasks:
+- Readme with User stories to define the scope and steps
+- Functionality for all parts
+- D3 for data visualization
+- Local storage to store user data
+
+var task1 = 'Hello!';
+localStorage.setItem('task1', task1);
+// function getData

@@ -5,6 +5,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
     crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie|Ubuntu" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="./style.css">
     <title>HabitOwl</title>
   </head>
@@ -17,16 +18,16 @@
         </div>
         <div class="menu">
           <ul class="nav">
-            <li id="habitsForm" class="nav-item">
+            <li id="formBtn" class="nav-item">
               <a href="" class="link"><i class="fas fa-list-ul"></i></a>
             </li>
-            <li id="habitsTrack" class="nav-item">
+            <li id="trackBtn" class="nav-item">
               <a href="" class="link"><i class="fas fa-check-square"></i></a>
             </li>
-            <li id="habitsStats" class="nav-item">
+            <li id="statsBtn" class="nav-item">
               <a href="" class="link"><i class="far fa-calendar-alt"></i></a>
             </li>
-            <li id="habitsSettings" class="nav-item">
+            <li id="settingsBtn" class="nav-item">
               <a href="" class="link"><i class="fas fa-cog"></i></a>
             </li>
           </ul>
@@ -51,32 +52,37 @@
         <div class="page-title">Mark Your Progress</div>
         <div class="track-area">
           <div class="track-list">
-            <p class="track-item">Drink water
-              <span class="item-icon">
+            <p class="track-item">
+              <span class="track1"></span>
+              <span id="box1" class="item-icon">
                 <i class="box far fa-square"></i>
                 <i class="checkmark fas fa-check hide"></i>
               </span>
             </p>
-            <p class="track-item">Read my book
-              <span class="item-icon">
+            <p class="track-item">
+              <span class="track2"></span>
+              <span id="box2" class="item-icon">
                 <i class="box far fa-square"></i>
                 <i class="checkmark fas fa-check hide"></i>
               </span>
             </p>
-            <p class="track-item">Exercise
-              <span class="item-icon">
+            <p class="track-item">
+              <span class="track3"></span>
+              <span id="box3" class="item-icon">
                 <i class="box far fa-square"></i>
                 <i class="checkmark fas fa-check hide"></i>
               </span>
             </p>
-            <p class="track-item">Take the stairs
-              <span class="item-icon">
+            <p class="track-item">
+              <span class="track4"></span>
+              <span id="box4" class="item-icon">
                 <i class="box far fa-square"></i>
                 <i class="checkmark fas fa-check hide"></i>
               </span>
             </p>
-            <p class="track-item">Reply to emails
-              <span class="item-icon">
+            <p class="track-item">
+              <span class="track5"></span>
+              <span id="box5" class="item-icon">
                 <i class="box far fa-square"></i>
                 <i class="checkmark fas fa-check hide"></i>
               </span>
@@ -152,7 +158,9 @@
       </main>
 
       <main id="settings" class="page hide-part">
-        <div class="page-title">This would be the settings part</div>
+        <div class="page-title">
+          <h1>SETTINGS</h1>
+        </div>
       </main>
 
     </div>

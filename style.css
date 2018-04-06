@@ -157,3 +157,6 @@ input:focus {
 .task5 {
   background-color: #fc1054;
 }
+.completed {
+  display: block;
+}
