@@ -20,7 +20,6 @@ function populateInput() {
 
 // Local storage and form input
 var storedData = [];
-var retrievedData = [];
 
 // submit habits form
 $('#submit').on('click', function(e) {
@@ -51,7 +50,7 @@ $('#submit').on('click', function(e) {
   }
 });
 
-// check that the input in valid
+// check that input in valid
 function checkInput(t) {
   return t.task.length < 21;
 }
@@ -72,13 +71,17 @@ function getTasks() {
   // populateStats(tasksArray); // add later when d3 ready
 }
 
-// Populate track part with the data
+// -------------------------------------------------
+// Populate track part with the data after checking that there is input
 function populateTrack(tasksArray) {
-  $('.track1').text(tasksArray[0].task);
-  $('.track2').text(tasksArray[1].task);
-  $('.track3').text(tasksArray[2].task);
-  $('.track4').text(tasksArray[3].task);
-  $('.track5').text(tasksArray[4].task);
+  for (var i = 0; i < tasksArray.length; i++) {
+    if (tasksArray[i].task === '') {
+      $('.item' + (i + 1)).addClass('hide');
+    } else {
+      $('.track' + (i + 1)).text(tasksArray[i].task);
+      $('.item' + (i + 1)).removeClass('hide');
+    }
+  }
 }
 
 // Check off the completed tasks
@@ -90,6 +93,12 @@ $('.item-icon').on('click', function(e) {
 
 // -------------------------------------------------
 // Navigate between the parts ("pages")
+
+// go to stats page from track pages
+$('#toStats').on('click', function(e) {
+  e.preventDefault();
+  moveToStatsPage();
+});
 
 $('#formBtn').on('click', function(e) {
   e.preventDefault();
@@ -106,10 +115,7 @@ $('#trackBtn').on('click', function(e) {
 
 $('#statsBtn').on('click', function(e) {
   e.preventDefault();
-  $('#stats').removeClass('hide-part');
-  $('#form').addClass('hide-part');
-  $('#track').addClass('hide-part');
-  $('#settings').addClass('hide-part');
+  moveToStatsPage();
 });
 
 $('#settingsBtn').on('click', function(e) {
@@ -124,5 +130,12 @@ function moveToTrackPage() {
   $('#track').removeClass('hide-part');
   $('#form').addClass('hide-part');
   $('#stats').addClass('hide-part');
+  $('#settings').addClass('hide-part');
+}
+
+function moveToStatsPage() {
+  $('#stats').removeClass('hide-part');
+  $('#form').addClass('hide-part');
+  $('#track').addClass('hide-part');
   $('#settings').addClass('hide-part');
 }
