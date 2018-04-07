@@ -40,10 +40,23 @@ submitForm.addEventListener('click', function(e) {
     { task: task4Val, color: '#123123', date: '18.3.18', done: false },
     { task: task5Val, color: '#444333', date: '18.3.18', done: false }
   ];
-  storeData(tasks);
-  moveToTrackPage();
-  getTasks();
+
+  // checkInput(tasks);
+  if (!tasks.every(checkInput)) {
+    $('#message').removeClass('hide-message');
+  } else {
+    console.log('returning class');
+    $('#message').addClass('hide-message');
+    storeData(tasks);
+    moveToTrackPage();
+    getTasks();
+  }
 });
+
+// check that the input in valid
+function checkInput(t) {
+  return t.task.length < 21;
+}
 
 // send data to local storage
 function storeData(tasks) {
@@ -84,14 +97,6 @@ $('.item-icon').on('click', function(e) {
     .find('.checkmark')
     .toggleClass('hide');
 });
-
-// box5.addEventListener('click', function() {
-//   console.log(this);
-// });
-// boxes.addEventListener('click', function() {
-//   console.log(this);
-//   // completed.classList.toggle('hide');
-// });
 
 // -------------------------------------------------
 // Navigate between the parts ("pages")
