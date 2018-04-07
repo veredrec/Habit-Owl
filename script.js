@@ -8,8 +8,6 @@ var task3 = document.getElementById('task3');
 var task4 = document.getElementById('task4');
 var task5 = document.getElementById('task5');
 
-populateInput();
-
 function populateInput() {
   task1.value = tasksArray[0].task;
   task2.value = tasksArray[1].task;
@@ -21,6 +19,7 @@ function populateInput() {
 // Local storage and form input
 var storedData = [];
 var retrievedData = [];
+var tasks = [];
 
 // submit habits form
 $('#submit').on('click', function(e) {
@@ -64,11 +63,20 @@ function storeData(tasks) {
 // retrieve data from local storage
 function getTasks() {
   if (!localStorage.getItem('tasks')) {
-    tasksArray = [];
+    tasksArray = [
+      { task: 'Drink water' },
+      { task: 'Read my book' },
+      { task: 'Exercise' },
+      { task: 'Take the staris' },
+      { task: 'Reply to emails' }
+    ];
+    populateInput();
+    populateTrack();
   } else {
     tasksArray = JSON.parse(localStorage.getItem('tasks'));
+    populateInput(tasksArray);
+    populateTrack(tasksArray);
   }
-  populateTrack(tasksArray);
   // populateStats(tasksArray); // add later when d3 ready
 }
 
@@ -86,6 +94,16 @@ $('.item-icon').on('click', function(e) {
   $(this)
     .find('.checkmark')
     .toggleClass('hide');
+});
+
+// Remove task by clicking the trash icon
+$('.trash').on('click', function() {
+  var currentTask = $(this)
+    .siblings('.form-input')
+    .attr('id');
+  var taskNum = currentTask.slice(4);
+  console.log(tasks);
+  tasks[currentTask - 1].task = '';
 });
 
 // -------------------------------------------------
