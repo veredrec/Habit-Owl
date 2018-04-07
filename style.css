@@ -53,8 +53,8 @@ input:focus {
   background-color: #494c7b;
   width: 100%;
   color: #eee;
-  font-size: 2.2rem;
-  padding: 1rem 0;
+  font-size: 1.8rem;
+  padding: 0.8rem 0;
   text-align: center;
 }
 /* MAIN CONTENT */
@@ -66,19 +66,23 @@ input:focus {
 }
 .form-area,
 .track-area {
-  width: 80%;
-  margin: 1rem auto;
+  width: 70%;
+  margin: 2rem auto;
 }
-.form,
 .track-list {
   display: flex;
   flex-direction: column;
 }
+.input,
+.submit {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
 .form-input,
 .submit {
-  margin: 0.8rem auto;
-  width: 40%;
-  font-size: 1.8rem;
+  margin-top: 1rem;
+  font-size: 2.2rem;
   color: #494c7b;
   font-family: 'Reenie Beanie', cursive;
   padding: 0.3rem;
@@ -91,7 +95,11 @@ input:focus {
   font-family: 'Ubuntu', sans-serif;
   color: #eee;
   font-size: 1.4rem;
-  margin-top: 1.2rem;
+  margin-top: 1.5rem;
+}
+.trash {
+  font-size: 0.7rem;
+  color: #494c7b;
 }
 .message {
   text-align: center;
