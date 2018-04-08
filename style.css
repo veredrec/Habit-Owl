@@ -66,13 +66,18 @@ input:focus {
 }
 .form-area,
 .track-area {
-  width: 80%;
-  margin: 1rem auto;
+  width: 70%;
+  margin: 2rem auto;
 }
-.form,
 .track-list {
   display: flex;
   flex-direction: column;
+}
+.input,
+.submit {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
 .form-input,
 .submit,
