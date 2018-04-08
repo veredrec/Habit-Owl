@@ -53,8 +53,8 @@ input:focus {
   background-color: #494c7b;
   width: 100%;
   color: #eee;
-  font-size: 1.8rem;
-  padding: 0.8rem 0;
+  font-size: 2rem;
+  padding: 1rem 0;
   text-align: center;
 }
 /* MAIN CONTENT */
@@ -80,9 +80,11 @@ input:focus {
   text-align: center;
 }
 .form-input,
-.submit {
-  margin-top: 1rem;
-  font-size: 2.2rem;
+.submit,
+.toStats {
+  margin: 0.8rem auto;
+  width: 40%;
+  font-size: 1.8rem;
   color: #494c7b;
   font-family: 'Reenie Beanie', cursive;
   padding: 0.3rem;
@@ -90,16 +92,14 @@ input:focus {
   border-bottom: 1px solid #494c7b;
   background-color: transparent;
 }
-.submit {
+.submit,
+.toStats {
+  margin-top: 1rem;
   background-color: #7b4965;
   font-family: 'Ubuntu', sans-serif;
   color: #eee;
   font-size: 1.4rem;
-  margin-top: 1.5rem;
-}
-.trash {
-  font-size: 0.7rem;
-  color: #494c7b;
+  text-align: center;
 }
 .message {
   text-align: center;
