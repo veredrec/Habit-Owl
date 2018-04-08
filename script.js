@@ -1,3 +1,11 @@
+// maybe have two differert types of data:
+// 1. tasks = name and complet only - to populate input and track
+// 2. trackTasks = tasks that are added at midnight:
+// generates object with all details - color, date, complete
+// push new object to the existing array
+// then - make all tasks in first array - done: false
+// the second array would generate the D3
+
 // call to populate the data from local storage
 getTasks();
 
