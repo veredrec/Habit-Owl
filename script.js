@@ -99,6 +99,18 @@ function populateTrack(tasksArray) {
   }
 }
 
+// populate stats part with the data after checking that there is input
+function populateStats(tasksArray) {
+  for (var i = 0; i < tasksArray.length; i++) {
+    if (tasksArray[i].task === '') {
+      $('.item' + (i + 1)).addClass('hide');
+    } else {
+      $('.stats' + (i + 1)).text(tasksArray[i].task);
+      $('.item' + (i + 1)).removeClass('hide');
+    }
+  }
+}
+
 // Check off the completed tasks
 $('.item-icon').on('click', function(e) {
   $(this)
@@ -107,14 +119,14 @@ $('.item-icon').on('click', function(e) {
 });
 
 // Remove task by clicking the trash icon
-$('.trash').on('click', function() {
-  var currentTask = $(this)
-    .siblings('.form-input')
-    .attr('id');
-  var taskNum = currentTask.slice(4);
-  console.log(tasks);
-  tasks[currentTask - 1].task = '';
-});
+// $('.trash').on('click', function() {
+//   var currentTask = $(this)
+//     .siblings('.form-input')
+//     .attr('id');
+//   var taskNum = currentTask.slice(4);
+//   console.log(tasks);
+//   tasks[currentTask - 1].task = '';
+// });
 
 // -------------------------------------------------
 // Navigate between the parts ("pages")
