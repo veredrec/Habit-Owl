@@ -69,6 +69,21 @@ input:focus {
   width: 70%;
   margin: 2rem auto;
 }
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.hide-form {
+  display: none;
+}
+.habit-list {
+  list-style-type: none;
+  padding: 0;
+}
+.list-item {
+  text-align: center;
+  font-size: 1rem;
+}
 .track-list {
   display: flex;
   flex-direction: column;

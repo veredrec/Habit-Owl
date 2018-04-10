@@ -39,14 +39,14 @@
           <p id="message" class="message hide-message">*Please describe your habits in 20 characters max</p>
         </div>
         <div class="form-area">
-          <form class="form" method="POST">
-            <input type="text" class="form-input" id="task1" placeholder="e.g. Drink water">
-            <input type="text" class="form-input" id="task2" placeholder="e.g. Read my book">
-            <input type="text" class="form-input" id="task3" placeholder="e.g. Exercise">
-            <input type="text" class="form-input" id="task4" placeholder="e.g. Take the stairs">
-            <input type="text" class="form-input" id="task5" placeholder="e.g. Reply to emails">
-            <input class="submit" id="submit" type="submit" value="Start tracking habits!">
+          <form id="addForm">
+            <input type="text" class="form-input" id="task" placeholder="e.g. Drink water">
+            <button class="submit">
+              <i class="fas fa-plus-circle"></i>
+            </button>
           </form>
+          <ul id="habitList" class="habit-list"></ul>
+          <button class="submit" value="Start tracking habits!">
         </div>
       </main>
 
@@ -168,6 +168,6 @@
 
     </div>
 
-  <script type="text/javascript" src="./script.js"></script>
+  <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
