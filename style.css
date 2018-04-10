@@ -85,8 +85,7 @@ input:focus {
   font-size: 1rem;
 }
 .track-list {
-  display: flex;
-  flex-direction: column;
+  list-style-type: none;
 }
 .input,
 .submit {
@@ -189,4 +188,7 @@ input:focus {
 }
 .task5 {
   background-color: #fc1054;
+}
+.hide-stats {
+  display: none;
 }
