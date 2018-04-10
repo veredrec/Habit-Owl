@@ -16,7 +16,7 @@ $('#formBtn').on('click', function(e) {
   $('#settings').addClass('hide-part');
 });
 
-$('#trackBtn').on('click', function(e) {
+$('#trackBtn, #toTrack').on('click', function(e) {
   e.preventDefault();
   populateTrack(habits);
   $('#track').removeClass('hide-part');
@@ -43,7 +43,7 @@ $('#settingsBtn').on('click', function(e) {
 
 // habits data structure for title and complete only
 var habits = [];
-$('.submit').on('click', function(e) {
+$('#plus').on('click', function(e) {
   e.preventDefault();
   createHabits();
 });
@@ -66,7 +66,6 @@ function createHabits() {
 // send data to local storage
 function storeData(habits) {
   storedData = localStorage.setItem('habits', JSON.stringify(habits));
-  // showHabits(habits);
 }
 
 // check that habits array is not 5
@@ -104,15 +103,24 @@ function showHabits(habits) {
 function populateTrack(habits) {
   $('#trackList').replaceWith('<ul id="trackList" class="track-list"></ul>');
   for (var i = 0; i < habits.length; i++) {
-    $('#trackList').append(
+    var trackElement =
       '<p class="track-item"><span class="track">' +
-        habits[i].habit +
-        '</span><span id="box1" class="item-icon"><i class="box far fa-square"></i><i class="checkmark fas fa-check hide"></i></span></p>'
-    );
+      habits[i].habit +
+      '</span><span class="item-icon" id="box' +
+      (i + 1) +
+      '"><i class="box far fa-square"></i><i class="checkmark fas fa-check hide"></i></span></p>';
+    $('#trackList').append(trackElement);
   }
 }
 
 getHabits();
+
+// Check off the completed tasks
+$(document).on('click', '.item-icon', function() {
+  $(this)
+    .find('.checkmark')
+    .toggleClass('hide');
+});
 
 // // Show habits on stats page
 // $('#stats' + (i + 1)).text(habits[i].habit);

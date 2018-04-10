@@ -40,14 +40,16 @@
         </div>
         <div class="form-area">
           <p id="limitMessage" class="limit-message hide-message">You have your 5 habits!</p>
-          <form id="addForm">
+          <form id="addForm" class="form">
             <input type="text" class="form-input" id="task" placeholder="e.g. Drink water">
-            <button class="submit">
+            <button id="plus" class="plus-icon">
               <i class="fas fa-plus-circle"></i>
             </button>
           </form>
+        </div>
+        <div>
           <ul id="habitList" class="habit-list"></ul>
-          <button class="submit" value="Start tracking habits!">
+          <button id="toTrack" class="to-tracks">Start tracking habits!</button>
         </div>
       </main>
 
@@ -55,7 +57,7 @@
         <div class="page-title">Mark Your Progress</div>
         <div class="track-area">
           <ul id="trackList" class="track-list"></ul>
-          <input class="toStats" id="toStats" value="See My Progress">
+          <input id="toStats" class="to-stats" value="See My Progress">
         </div>
       </main>
 
