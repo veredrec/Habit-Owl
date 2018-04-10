@@ -13,7 +13,7 @@
     <div class="content">
       <header class="header">
         <div class="logo">
-          <img class="logo-image" src="owl.png" alt="logo">
+          <img class="logo-image" src="owl-logo.png" alt="logo">
           <h1 class="logo-text">HabitOwl</h1>
         </div>
         <div class="menu">
@@ -39,6 +39,7 @@
           <p id="message" class="message hide-message">*Please describe your habits in 20 characters max</p>
         </div>
         <div class="form-area">
+          <p id="limitMessage" class="limit-message hide-message">You have your 5 habits!</p>
           <form id="addForm">
             <input type="text" class="form-input" id="task" placeholder="e.g. Drink water">
             <button class="submit">
@@ -53,44 +54,8 @@
       <main id="track" class="page hide-part">
         <div class="page-title">Mark Your Progress</div>
         <div class="track-area">
-          <div class="track-list">
-            <p class="track-item item1">
-              <span class="track1"></span>
-              <span id="box1" class="item-icon">
-                <i class="box far fa-square"></i>
-                <i class="checkmark fas fa-check hide"></i>
-              </span>
-            </p>
-            <p class="track-item item2">
-              <span class="track2"></span>
-              <span id="box2" class="item-icon">
-                <i class="box far fa-square"></i>
-                <i class="checkmark fas fa-check hide"></i>
-              </span>
-            </p>
-            <p class="track-item item3">
-              <span class="track3"></span>
-              <span id="box3" class="item-icon">
-                <i class="box far fa-square"></i>
-                <i class="checkmark fas fa-check hide"></i>
-              </span>
-            </p>
-            <p class="track-item item4">
-              <span class="track4"></span>
-              <span id="box4" class="item-icon">
-                <i class="box far fa-square"></i>
-                <i class="checkmark fas fa-check hide"></i>
-              </span>
-            </p>
-            <p class="track-item item5">
-              <span class="track5"></span>
-              <span id="box5" class="item-icon">
-                <i class="box far fa-square"></i>
-                <i class="checkmark fas fa-check hide"></i>
-              </span>
-            </p>
-            <input class="toStats" id="toStats" value="See My Progress">
-          </div>
+          <ul id="trackList" class="track-list"></ul>
+          <input class="toStats" id="toStats" value="See My Progress">
         </div>
       </main>
 
@@ -107,8 +72,8 @@
             <th>Fri</th>
             <th>Sat</th>
           </tr>
-          <tr>
-            <td class="stats1"></td>
+          <tr id="habit1Stats">
+            <td id="stats1" class="stats1"></td>
             <td class="empty complete task1"></td>
             <td class="empty complete task1"></td>
             <td class="empty"></td>
@@ -117,8 +82,8 @@
             <td class="empty"></td>
             <td class="empty complete task1"></td>
           </tr>
-          <tr>
-            <td class="stats2"></td>
+          <tr id="habit2Stats">
+            <td id="stats2" class="stats2"></td>
             <td class="empty"></td>
             <td class="empty complete task2"></td>
             <td class="empty complete task2"></td>
@@ -127,8 +92,8 @@
             <td class="empty complete task2"></td>
             <td class="empty"></td>
           </tr>
-          <tr>
-            <td class="stats3"></td>
+          <tr id="habit3Stats">
+            <td id="stats3" class="stats3"></td>
             <td class="empty complete task3"></td>
             <td class="empty complete task3"></td>
             <td class="empty"></td>
@@ -137,8 +102,8 @@
             <td class="empty complete task3"></td>
             <td class="empty complete task3"></td>
           </tr>
-          <tr>
-            <td class="stats4"></td>
+          <tr id="habit4Stats">
+            <td id="stats4" class="stats4"></td>
             <td class="empty complete task4"></td>
             <td class="empty"></td>
             <td class="empty complete task4"></td>
@@ -147,8 +112,8 @@
             <td class="empty complete task4"></td>
             <td class="empty complete task4"></td>
           </tr>
-          <tr>
-            <td class="stats5"></td>
+          <tr id="habit5Stats">
+            <td id="stats5" class="stats5"></td>
             <td class="empty complete task5"></td>
             <td class="empty"></td>
             <td class="empty complete task5"></td>
